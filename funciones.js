@@ -5,7 +5,6 @@ var ruta = 'archivo.txt';
 datos_fuente.open("GET",ruta,false);
 datos_fuente.send(null);
 var text = datos_fuente.responseText;
-
 //Mostrar codigo fuente
 function Fuente(){
   document.getElementById("operacion").innerText =text.toString();
@@ -35,4 +34,9 @@ function sin_con(){
   document.getElementById("operacion").innerText =x.toString();
 }
 
-//terminar gato
+function parrafo(){
+  var par = /(?=[^<\s/p>])+(.*?)(?=<\/p>)/g;
+  var par_m = text.match(par);
+  var par_e = btoa(par_m);
+  document.getElementById("operacion").innerText = par_e.toString() ;
+}

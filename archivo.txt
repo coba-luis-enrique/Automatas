@@ -1,0 +1,585 @@
+<!doctype html>
+<!--[if IE]>
+<html lang="es" xmlns:fb="http://ogp.me/ns/fb#" class="ie">
+<![endif]-->
+<!--[if !IE]><!-->
+<html lang="es" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<![endif]-->
+<head>
+<title>Temozón Sur</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:site_name" content="Gobierno del Estado de Yucatán">
+<meta property="og:title" content="Temozón Sur">
+<meta property="og:description" content="Temozón nos permite apreciar ahora los indicios de la época de esplendor de Yucatán. Se conserva el antiguo salón de máquinas y el patio del secado. La arquería de la casa principal nos acoge y convoca en una plácida estancia, ahora convertida en restaurante de selecta y tradicional cocina yucateca e internacional. Cuenta con una piscina, con detalles arquitectónicos modernos y un cenote.">
+<meta property="og:image" content="http://www.yucatan.gob.mx/docs/img/tn_temozon_sur.jpg">
+<meta property="og:url" content="http://www.yucatan.gob.mx/?p=temozon_sur">
+<meta name="title" content="Temozón Sur">
+<meta name="description" content="Temozón nos permite apreciar ahora los indicios de la época de esplendor de Yucatán. Se conserva el antiguo salón de máquinas y el patio del secado. La arquería de la casa principal nos acoge y convoca en una plácida estancia, ahora convertida en restaurante de selecta y tradicional cocina yucateca e internacional. Cuenta con una piscina, con detalles arquitectónicos modernos y un cenote.">
+<link href="http://www.yucatan.gob.mx/docs/img/tn_temozon_sur.jpg" rel="image_src">
+<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/style.css?v=190919" rel="stylesheet">
+<link href="/css/yucatan.css?v=190812" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="/lib/html5shiv.min.js"></script>
+<script src="/lib/css3.mediaqueries.js"></script>
+<script src="/lib/css3.respond.js"></script>
+<![endif]-->
+<link href="css/carousel.css" rel="stylesheet">
+<style class="text/css">
+#map_container {
+    position:relative;
+    max-width:480px;
+}
+#map_container:before {
+    display:block;
+    content:"";
+    width:100%;
+    padding-top:75%;
+}
+#map_canvas {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    text-align:initial;
+}
+@media print {
+    img, #map_container {
+        max-width:none !important;
+    }
+    #map_container {
+        width:480px;
+        height:360px;
+    }
+}
+</style>
+<link href="/lib/fancybox3/jquery.fancybox.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div class="fondo_superior noprint">
+    <div class="container-fluid superior">
+        <span class="lg_only"><b>Mérida, Yucatán,</b> 10 de octubre de 2019</span>
+        <div class="pull-right">
+            <ul id="superior">
+                <li><a href="/"><span class="ico ico16 ico_redondo icon-inicio"></span> Inicio</a></li>
+                <li><a href="/?p=emergencias"><span class="ico ico16 ico_redondo icon-telefono"></span> Emergencias</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="ico ico16 ico_redondo icon-mapa"></span> Mapas</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/estado/mapa.php">Sitios turísticos</a></li>
+                        <li><a href="/gobierno/mapa.php">Dependencias y entidades</a></li>
+                    </ul>
+                </li>
+                <li class="lg_only"><a href="/gobierno/diario_oficial.php"><span class="ico ico16 ico_redondo icon-libro"></span> Diario Oficial</a></li>
+                <li class="lg_only"><a href="/gobierno/dependencias.php"><span class="ico ico16 ico_redondo icon-logo1"></span> Dependencias</a></li>
+                <li class="lg_only"><a href="/gobierno/directorio.php"><span class="ico ico16 ico_redondo icon-directorio_telefonico"></span> Directorio</a></li>
+                <li><a href="/contacto.php" data-src="/contacto.php?w=1" class="iframe"><span class="ico ico16 ico_redondo icon-email"></span> Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div id="fondo_cabezal">
+    <a id="menu_toggle" class="noprint">
+        <span class="ico ico20 icon-menu"></span>
+    </a>
+    <div class="container-fluid cabezal">
+        <a href="/"><img src="/img/logo_2018_2024.png" class="logo" alt="Gobierno del Estado de Yucatán"></a>
+        <form action="/busqueda.php" class="btn_buscar">
+        <div class="input-group noprint">
+            <input name="q" value="" class="form-control" placeholder="Buscar">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><span class="ico icon-lupa"></span></button>
+            </span>
+        </div>
+        </form>
+    </div>
+</div>
+<div class="borde_menu"></div>
+<div class="fondo_menu noprint">
+    <div id="menu">
+        <ul>
+            <li class="m0"><a href="/"><span class="ico icon-inicio"></span> Inicio</a></li>
+            <li class="m0"><a href="/?p=emergencias"><span class="ico icon-telefono"></span> Emergencias</a></li>
+            <li class="dropdown m0">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="ico icon-mapa"></span> Mapas</a>
+                <div class="dropdown-menu submenu l">
+                    <div class="lista"><ul>
+                        <li><a href="/estado/mapa.php">Sitios turísticos</a></li>
+                        <li><a href="/gobierno/mapa.php">Dependencias y entidades</a></li>
+                    </ul></div>
+                </div>
+            </li>
+            <li class="m0"><a href="/contacto.php" data-src="/contacto.php?w=1" class="iframe"><span class="ico icon-email"></span> Contacto</a></li>
+                                                <li class="m1"><a href="/servicios" target="_self">Trámites y servicios</a></li>
+                                                                <li class="dropdown m1">
+                        <a href="/gobierno" class="dropdown-toggle " data-toggle="dropdown" role="button">Gobierno</a>
+                                                    <div class="dropdown-menu submenu l">
+                                <div class="lista"><ul>
+                                                                    <li><a href="/gobierno/dependencias.php" target="_self">Dependencias y entidades</a></li>
+                                                                    <li><a href="/gobierno/directorio.php" target="_self">Directorio de funcionarios</a></li>
+                                                                    <li><a href="/gobierno/diario_oficial.php" target="_self">Diario Oficial</a></li>
+                                                                    <li><a href="/gobierno/hora_nacional.php" target="_self">Yucatán en La Hora Nacional</a></li>
+                                                                                                    <li class="index"><a href="/gobierno">Más información...</a></li>
+                                                                </ul></div>
+                                <div class="foto_menu">
+                                    <a href="/gobierno">                                    <img src="/img/gobierno_menu.jpg" width="200" height="200" alt="Gobierno"><div style="line-height:30px;">Gobierno</div>
+                                    </a>                                </div>
+                            </div>
+                                            </li>
+                                                                <li class="dropdown m1">
+                        <a href="/ciudadano" class="dropdown-toggle " data-toggle="dropdown" role="button">Ciudadano</a>
+                                                    <div class="dropdown-menu submenu l">
+                                <div class="lista"><ul>
+                                                                    <li><a href="/contacto.php?m=atencion.ciudadana" target="_self">Solicitudes en línea</a></li>
+                                                                    <li><a href="/?p=emergencias" target="_self">Teléfonos de emergencia</a></li>
+                                                                    <li><a href="/procivy" target="_self">Protección Civil de Yucatán</a></li>
+                                                                    <li><a href="/ciudadano/programas.php" target="_self">Programas de bienes y servicios</a></li>
+                                                                                                    <li class="index"><a href="/ciudadano">Más información...</a></li>
+                                                                </ul></div>
+                                <div class="foto_menu">
+                                    <a href="/ciudadano">                                    <img src="/img/ciudadano_menu.jpg" width="200" height="200" alt="Ciudadano"><div style="line-height:30px;">Ciudadano</div>
+                                    </a>                                </div>
+                            </div>
+                                            </li>
+                                                                <li class="dropdown m1">
+                        <a href="/saladeprensa" class="dropdown-toggle " data-toggle="dropdown" role="button">Sala de prensa</a>
+                                                    <div class="dropdown-menu dropdown-menu-right submenu r">
+                                <div class="foto_menu">
+                                    <a href="/saladeprensa">                                    <img src="/img/saladeprensa_menu.jpg" width="200" height="200" alt="Sala de prensa"><div style="line-height:30px;">Sala de prensa</div>
+                                    </a>                                </div>
+                                <div class="lista"><ul>
+                                                                    <li><a href="/saladeprensa" target="_self">Noticias</a></li>
+                                                                    <li><a href="/saladeprensa/?t=2" target="_self">Discursos</a></li>
+                                                                    <li><a href="/saladeprensa/agenda.php" target="_self">Agenda del Gobernador</a></li>
+                                                                                                    <li class="index"><a href="/saladeprensa">Más información...</a></li>
+                                                                </ul></div>
+                            </div>
+                                            </li>
+                                                                <li class="m1"><a href="http://transparencia.yucatan.gob.mx" target="_blank">Transparencia</a></li>
+                                                                <li class="dropdown m1">
+                        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button">Mejora regulatoria</a>
+                                                    <div class="dropdown-menu dropdown-menu-right submenu r">
+                                <div class="foto_menu">
+                                                                        <img src="/img/mejora_menu.jpg" width="200" height="200" alt="Mejora regulatoria"><div style="line-height:30px;">Mejora regulatoria</div>
+                                                                    </div>
+                                <div class="lista"><ul>
+                                                                    <li><a href="/mejora-regulatoria/inspectores.php" target="_self">Registro Estatal de Inspectores y Verificadores</a></li>
+                                                                    <li><a href="/mejora-regulatoria/regulaciones.php" target="_self">Registro de Regulaciones</a></li>
+                                                                    <li><a href="/mejora-regulatoria/programa.php" target="_self">Programa de Mejora Regulatoria</a></li>
+                                                                    <li><a href="/mejora-regulatoria/agenda.php" target="_self">Agenda Regulatoria</a></li>
+                                                                    <li><a href="/mejora-regulatoria/mir.php" target="_self">Manifestación de Impacto Regulatorio</a></li>
+                                                                    <li><a href="/mejora-regulatoria/protesta.php" target="_self">Protesta Ciudadana</a></li>
+                                                                                                </ul></div>
+                            </div>
+                                            </li>
+                                                                <li class="dropdown m1">
+                        <a href="/estado" class="dropdown-toggle selected" data-toggle="dropdown" role="button">Yucatán</a>
+                                                    <div class="dropdown-menu dropdown-menu-right submenu r">
+                                <div class="foto_menu">
+                                    <a href="/estado">                                    <img src="/img/yucatan_menu.jpg" width="200" height="200" alt="Yucatán"><div style="line-height:30px;">Yucatán</div>
+                                    </a>                                </div>
+                                <div class="lista"><ul>
+                                                                    <li><a href="/estado/mapa.php" target="_self">Mapa turístico</a></li>
+                                                                    <li><a href="/estado/municipios.php" target="_self">Municipios</a></li>
+                                                                    <li><a href="/?p=escudo_yucatan" target="_self">Escudo</a></li>
+                                                                    <li><a href="/?p=medio_fisico" target="_self">Medio físico</a></li>
+                                                                    <li><a href="/?p=perfil_demografico" target="_self">Perfil demográfico</a></li>
+                                                                    <li><a href="/?p=historia_yucatan" target="_self">Historia</a></li>
+                                                                    <li><a href="/?p=cronologia" target="_self">Gobernadores</a></li>
+                                                                    <li><a href="/estado/efemerides.php" target="_self">Efemérides</a></li>
+                                                                    <li><a href="/?p=ciudades_coloniales" target="_self">Ciudades coloniales</a></li>
+                                                                    <li><a href="/?p=recursos_naturales" target="_self">Recursos naturales</a></li>
+                                                                    <li><a href="/?p=cultura_tradiciones" target="_self">Cultura y tradiciones</a></li>
+                                                                    <li><a href="/?p=arqueologia" target="_self">Arqueología</a></li>
+                                                                    <li><a href="/?p=haciendas" target="_self">Haciendas</a></li>
+                                                                                                    <li class="index"><a href="/estado">Más información...</a></li>
+                                                                </ul></div>
+                            </div>
+                                            </li>
+                                    </ul>
+    </div>
+</div>
+<div id="fondo_pagina">
+    <div class="container-fluid" id="pagina">
+        <div class="row">
+            <div class="col-md-9 " id="titulo_pagina">
+                            <div><a href="/">Inicio</a> &raquo;                    <a href="/estado">Yucatán</a> &raquo;
+                                    <a href="/?p=haciendas">Haciendas</a> &raquo;
+                </div>
+                <div class="titulo_pagina">Temozón Sur</div>
+                    <div class="share noprint"><div class="texto">Compartir &raquo;</div>
+        <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.yucatan.gob.mx%2F%3Fp%3Dtemozon_sur&t=Temoz%C3%B3n nos permite apreciar ahora los indicios de la %C3%A9poca de esplendor de Yucat%C3%A1n. Se conserva el antiguo sal%C3%B3n de m%C3%A1quinas y el patio del secado. La arquer%C3%ADa de la casa principal nos acoge y convoca en una pl%C3%A1cida estancia%2C ahora convertida en restaurante de selecta y tradicional cocina yucateca e internacional. Cuenta con una piscina%2C con detalles arquitect%C3%B3nicos modernos y un cenote.&locale=es_LA" target="_blank" title="Facebook" class="color_facebook"><span class="ico ico24 icon-facebook1"></span></a>
+        <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.yucatan.gob.mx%2F%3Fp%3Dtemozon_sur&text=Temoz%C3%B3n nos permite apreciar ahora los indicios de la %C3%A9poca de esplendor de Yucat%C3%A1n. Se conserva el antiguo sal%C3%B3n de m%C3%A1quinas y el patio del secado. La arquer%C3%ADa de la casa principal nos acoge y convoca en una pl%C3%A1cida estancia%2C ahora convertida en restaurante de selecta y tradicional cocina yucateca e internacional. Cuenta con una piscina%2C con detalles arquitect%C3%B3nicos modernos y un cenote.&lang=es" target="_blank" title="Twitter" class="color_twitter"><span class="ico ico24 icon-twitter1"></span></a>
+        <a href="whatsapp://send?text=Temoz%C3%B3n Sur: http%3A%2F%2Fwww.yucatan.gob.mx%2F%3Fp%3Dtemozon_sur" title="WhatsApp" data-action="share/whatsapp/share" class="color_whatsapp hidden"><span class="ico ico24 icon-whatsapp"></span></a>
+        <a href="#" class="color_default btnPrint" title="Imprimir"><span class="ico ico24 icon-impresora1"></span></a>
+        <a href="/compartir.php" class="color_default btnEmail" title="Correo electrónico"><span class="ico ico24 icon-email1"></span></a>
+    </div>
+                        </div>
+            <div class="col-md-3 noprint" id="derecha">
+    <div class="menu_lateral menu_sombra lg_only">
+        <div class="menu_title">Yucatán</div>
+                    <div class="menu_item"><a href="/estado/mapa.php" target="_self" class="tabla"><span class="ico ico24 grisA icon-mapa"></span><div class="text"><b>Mapa turístico</b></div></a></div>
+                    <div class="menu_item"><a href="/estado/municipios.php" target="_self" class="tabla"><span class="ico ico24 grisA icon-escudo1"></span><div class="text"><b>Municipios</b></div></a></div>
+                    <div class="menu_item"><a href="/?p=ciudades_coloniales" target="_self" class="tabla"><span class="ico ico24 grisA icon-iglesia"></span><div class="text"><b>Ciudades coloniales</b></div></a></div>
+                    <div class="menu_item"><a href="/?p=recursos_naturales" target="_self" class="tabla"><span class="ico ico24 grisA icon-cenote"></span><div class="text"><b>Recursos naturales</b></div></a></div>
+                    <div class="menu_item"><a href="/?p=cultura_tradiciones" target="_self" class="tabla"><span class="ico ico24 grisA icon-jarana"></span><div class="text"><b>Cultura y tradiciones</b></div></a></div>
+                    <div class="menu_item"><a href="/?p=arqueologia" target="_self" class="tabla"><span class="ico ico24 grisA icon-chichen"></span><div class="text"><b>Arqueología</b></div></a></div>
+                    <div class="menu_item"><a href="/?p=haciendas" target="_self" class="tabla"><span class="ico ico24 grisA icon-hacienda"></span><div class="text"><b>Haciendas</b></div></a></div>
+            </div>
+</div>
+            <div class="col-md-9 " id="cuerpo">
+
+
+    <div class="text-center">Municipio: <a href="estado/ver_municipio.php?id=1">Abalá</a></div>
+    <div class="height-20"></div>
+
+    <div id="noticias-detalle" class="carousel slide custom-tn">
+                <div class="carousel-ppal">
+            <div class="carousel-inner">                <div class="item active">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/4.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/5.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/8.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/9.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/12.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/13.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/15.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/16.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/17.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/20.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/22.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/25.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/26.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/27.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+                            <div class="item ">
+                                    <div class="archivo"><img src="/docs/galerias/temozon_sur/28.jpg" alt="Temozón Sur" class="horizontal"></div>
+                                    <div class="pie_foto">Temozón Sur</div>
+                </div>
+            </div>
+                        <div class="carousel-buttons">
+                <a class="pause" href="#noticias-detalle" role="button">
+                    <span class="ico ico24 icon-pausar"></span>
+                </a>
+                <a class="play hidden" href="#noticias-detalle" role="button">
+                    <span class="ico ico24 icon-iniciar"></span>
+                </a>
+            </div>
+            <a class="left carousel-control index-control" href="#noticias-detalle" role="button" data-slide="prev">
+                <span class="ico ico32 icon-ant1"></span>
+            </a>
+            <a class="right carousel-control index-control" href="#noticias-detalle" role="button" data-slide="next">
+                <span class="ico ico32 icon-sig1"></span>
+            </a>
+                    </div>
+                <div class="carousel-tn">
+            <a href="#" class="ant-tn"><span class="ico ico24 icon-ant1"></span></a>
+            <div class="tn-inner">
+                <ol class="carousel-indicators">                    <li class="active" data-target="#noticias-detalle" data-slide-to="0"><div class="thumb"><img src="/docs/galerias/temozon_sur/4.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="1"><div class="thumb"><img src="/docs/galerias/temozon_sur/5.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="2"><div class="thumb"><img src="/docs/galerias/temozon_sur/8.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="3"><div class="thumb"><img src="/docs/galerias/temozon_sur/9.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="4"><div class="thumb"><img src="/docs/galerias/temozon_sur/12.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="5"><div class="thumb"><img src="/docs/galerias/temozon_sur/13.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="6"><div class="thumb"><img src="/docs/galerias/temozon_sur/15.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="7"><div class="thumb"><img src="/docs/galerias/temozon_sur/16.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="8"><div class="thumb"><img src="/docs/galerias/temozon_sur/17.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="9"><div class="thumb"><img src="/docs/galerias/temozon_sur/20.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="10"><div class="thumb"><img src="/docs/galerias/temozon_sur/22.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="11"><div class="thumb"><img src="/docs/galerias/temozon_sur/25.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="12"><div class="thumb"><img src="/docs/galerias/temozon_sur/26.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="13"><div class="thumb"><img src="/docs/galerias/temozon_sur/27.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                                    <li  data-target="#noticias-detalle" data-slide-to="14"><div class="thumb"><img src="/docs/galerias/temozon_sur/28.jpg" alt="Temozón Sur" class="fixed-height"></div></li>
+                </ol>
+            </div>
+            <a href="#" class="sig-tn"><span class="ico ico24 icon-sig1"></span></a>
+        </div>
+            </div>
+    <div class="height-20"></div>
+
+    <div class="text-justify"><p>Perteneciente al municipio de Abalá, cuyo nombre significa "remolino de viento", ideal para remontarse en el tiempo y respirar el ambiente de prosperidad económica que vivió Yucatán a finales del Siglo XIX y principios del XX.</p><p>A mediados del Siglo XVII la Hacienda concentró su productividad en la cría de ganado y a partir de la segunda mitad del XVIII, cuando el henequén genera una nueva dimensión social y financiera para la Península mediante el cultivo y exportación de la fibra hacia Estados Unidos principalmente.</p><p>Temozón nos permite apreciar ahora los indicios de la época de esplendor. Están a la vista vestigios industriales y elementos propios del procesamiento de la fibra. Se conserva el antiguo salón de máquinas y el patio del secado. La arquería de la casa principal nos acoge y convoca en una plácida estancia, ahora convertida en restaurante de selecta y tradicional cocina yucateca e internacional. La piscina, con detalles arquitectónicos modernos, luce magnífica al centro de un conjunto visual que proyecta al fondo el edificio de la casa de máquinas que congregó en arduas labores a los campesinos mayas. Siguiendo esa ruta, en el traspatio nos encontramos un cenote.</p><p>Cuenta con 28 espaciosas suites lujosamente amuebladas y amplios baños con modernas instalaciones, el cuarto del patrón o suite presidencial, que consiste en una espaciosa habitación con estancia, sala de estar, biblioteca, amplio baño con una original tina y lavabos de piedra y una terraza con alberca privada.</p><p><a href="http://www.haciendatemozon.com" target="_blank" class="blank">http://www.haciendatemozon.com</a></p></div>
+
+    <p class="subtitulo">Ubicación</p>
+    <div id="map_container" class="center-block"><div id="map_canvas"></div></div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="height-20"></div>
+    <div class="print_url print">http://www.yucatan.gob.mx/?p=temozon_sur</div>
+    <div class="noprint">
+        <div id="irArriba"><a href="#arriba"><span class="ico icon-subir1 flecha"></span></a></div>
+        <div id="footer">
+            <div id="banner_inf" class="center-block lg_only">
+                <a href="#" class="ant_banner"><span class="ico ico24 icon-ant1"></span></a>                <div class="banners_inner ">
+                    <ul>                        <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/?p=emergencias" target="_self"><img src="/docs/banners/911.jpg" alt="Emergencias 911"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/abecedario-senas" target="_self"><img src="/docs/banners/lenguajesenas200x100.jpg" alt="Lengua de señas mexicana"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/procivy/temporada_ciclones_2019.php" target="_blank"><img src="/docs/banners/temporadaciclones_200x100.jpg" alt="Temporada de ciclones 2019"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/ciudadano/iipedey.php" target="_self"><img src="/docs/banners/iipedey.jpg" alt="Integrantes Consejo Consultivo IIPEDEY"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/ciudadano/programas.php" target="_self"><img src="/docs/banners/banner_200x100_2.jpg" alt="catalogo2018"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://www.yucatan.gob.mx/docs/banners/archivos/Diagnosticos_violencia.pdf" target="_blank"><img src="/docs/banners/BANNER_100x200_1.jpg" alt="libre_violencia"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="http://promociones.yucatan.travel/" target="_blank"><img src="/docs/banners/Isstey_Banner.jpg" alt="yucatan_travel"></a>                        </div></li>
+                                            <li><div class="imagen">
+                            <a href="https://empleo.gob.mx/" target="_blank"><img src="/docs/banners/Portal_200x100.jpg" alt="portal_empleo"></a>                        </div></li>
+                    </ul>
+                </div>
+                <a href="#" class="sig_banner"><span class="ico ico24 icon-sig1"></span></a>            </div>            <div id="emergencias" class="center-block">
+                <div class="cell">
+                    <div class="icono"><span class="ico ico32 icon-ambulancia"></span></div>
+                    <div class="texto"><div class="grande">911</div><div><b>Emergencias</b></div></div>
+                </div>
+                <div class="cell">
+                    <div class="icono"><span class="ico ico32 icon-telefono"></span></div>
+                    <div class="texto"><div class="grande">089</div><div><b>Denuncia<br>anónima</b></div></div>
+                </div>
+                <div class="cell">
+                    <div class="icono"><span class="ico ico32 icon-ssp"></span></div>
+                    <div class="texto"><div><b><abbr title="Secretaría de Seguridad Pública">SSP</abbr></b></div><div class="grande">930·32·00</div></div>
+                </div>
+                <div class="cell">
+                    <div class="icono"><span class="ico ico32 icon-fuego"></span></div>
+                    <div class="texto"><div><b>Bomberos</b></div><div class="grande">924·92·42</div></div>
+                </div>
+                <div class="cell">
+                    <div class="icono"><span class="ico ico32 icon-cruz_roja"></span></div>
+                    <div class="texto"><div><b>Cruz Roja</b></div><div class="grande">924·98·13</div></div>
+                </div>
+            </div>
+            <div id="pie" class="shadow">
+                <div class="center-block">
+                    <div class="logo">
+                        <img src="/img/logo_gris_.png" alt="Gobierno del Estado de Yucatán">
+                        <div class="dir"><b>Gobierno del Estado de Yucatán 2018-2024</b><br>Calle 61 x 60 y 62, Col. Centro<br>C.P. 97000, Mérida, Yucatán, México<br>Tel. (999) 930 3100</div>
+                    </div>
+                    <div class="ligas">
+                        <ul class="list-unstyled">
+                            <li><a href="/contacto.php" data-src="/contacto.php?w=1" class="iframe"><span class="ico ico16 icon-email"></span> Contacto</a></li>
+                            <li><a href="/sitios_interes.php"><span class="ico ico16 icon-w3"></span> Sitios de interés</a></li>
+                            <li class="lg_only"><span class="ico ico16 icon-mapa"></span> Mapas<ul>
+                                <li><a href="/estado/mapa.php">Sitios turísticos</a></li>
+                                <li><a href="/gobierno/mapa.php">Dependencias y entidades</a></li>
+                            </ul></li>
+                            <li><a href="/?p=politicas_sitio"><span class="ico ico16 icon-candado_cerrado"></span> Políticas de uso y privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="fondo_siguenos">
+                        <div class="siguenos">
+                            <div><b>Síguenos en:</b></div>
+                            <ul>
+                                <li><a href="https://www.facebook.com/gobierno.estado.yucatan" target="_blank"><div class="lg_only">/gobierno.estado.yucatan</div><div><span class="ico ico16 ico_redondo icon-facebook"></span></div></a></li>
+                                <li><a href="https://twitter.com/GobYucatan" target="_blank"><div class="lg_only">@GobYucatan</div><div><span class="ico ico16 ico_redondo icon-twitter"></span> <span class="grande">158,560</span></div></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mapa_sitio" class="shadow lg_only">
+                <div class="center-block">
+                    <a href="#inferior" id="mapa_toggle" data-toggle="collapse" role="button">Mapa del sitio</a>
+                    <div id="inferior" class="collapse container-fluid">
+                        <div class="row">                                                            <div class="col-md-4"><ul class="lista">
+                                             
+                                <li><a href="/servicios"><b>Trámites y servicios</b></a>
+                                    
+                                </li>
+                                                                                                                             
+                                <li><a href="/gobierno"><b>Gobierno</b></a>
+                                                                    <ul>                                        <li><a href="/gobierno/dependencias.php" target="_self">Dependencias y entidades</a></li>
+                                                                            <li><a href="/gobierno/directorio.php" target="_self">Directorio de funcionarios</a></li>
+                                                                            <li><a href="/gobierno/diario_oficial.php" target="_self">Diario Oficial</a></li>
+                                                                            <li><a href="/gobierno/hora_nacional.php" target="_self">Yucatán en La Hora Nacional</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                                            </ul></div>
+                                                                                                                                            <div class="col-md-4"><ul class="lista">
+                                             
+                                <li><a href="/ciudadano"><b>Ciudadano</b></a>
+                                                                    <ul>                                        <li><a href="/contacto.php?m=atencion.ciudadana" target="_self">Solicitudes en línea</a></li>
+                                                                            <li><a href="/?p=emergencias" target="_self">Teléfonos de emergencia</a></li>
+                                                                            <li><a href="/procivy" target="_self">Protección Civil de Yucatán</a></li>
+                                                                            <li><a href="/ciudadano/programas.php" target="_self">Programas de bienes y servicios</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                                                                                                             
+                                <li><a href="/saladeprensa"><b>Sala de prensa</b></a>
+                                                                    <ul>                                        <li><a href="/saladeprensa" target="_self">Noticias</a></li>
+                                                                            <li><a href="/saladeprensa/?t=2" target="_self">Discursos</a></li>
+                                                                            <li><a href="/saladeprensa/agenda.php" target="_self">Agenda del Gobernador</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                                            </ul></div>
+                                                                                                                                            <div class="col-md-4"><ul class="lista">
+                                             
+                                <li><a href="http://transparencia.yucatan.gob.mx"><b>Transparencia</b></a>
+                                    
+                                </li>
+                                                                                                                             
+                                <li><a href="#"><b>Mejora regulatoria</b></a>
+                                                                    <ul>                                        <li><a href="/mejora-regulatoria/inspectores.php" target="_self">Registro Estatal de Inspectores y Verificadores</a></li>
+                                                                            <li><a href="/mejora-regulatoria/regulaciones.php" target="_self">Registro de Regulaciones</a></li>
+                                                                            <li><a href="/mejora-regulatoria/programa.php" target="_self">Programa de Mejora Regulatoria</a></li>
+                                                                            <li><a href="/mejora-regulatoria/agenda.php" target="_self">Agenda Regulatoria</a></li>
+                                                                            <li><a href="/mejora-regulatoria/mir.php" target="_self">Manifestación de Impacto Regulatorio</a></li>
+                                                                            <li><a href="/mejora-regulatoria/protesta.php" target="_self">Protesta Ciudadana</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                                            </ul></div>
+                                                                                                                                            <div class="col-md-4"><ul class="lista">
+                                             
+                                <li><a href="/estado"><b>Yucatán</b></a>
+                                                                    <ul>                                        <li><a href="/estado/mapa.php" target="_self">Mapa turístico</a></li>
+                                                                            <li><a href="/estado/municipios.php" target="_self">Municipios</a></li>
+                                                                            <li><a href="/?p=escudo_yucatan" target="_self">Escudo</a></li>
+                                                                            <li><a href="/?p=medio_fisico" target="_self">Medio físico</a></li>
+                                                                            <li><a href="/?p=perfil_demografico" target="_self">Perfil demográfico</a></li>
+                                                                            <li><a href="/?p=historia_yucatan" target="_self">Historia</a></li>
+                                                                            <li><a href="/?p=cronologia" target="_self">Gobernadores</a></li>
+                                                                            <li><a href="/estado/efemerides.php" target="_self">Efemérides</a></li>
+                                                                            <li><a href="/?p=ciudades_coloniales" target="_self">Ciudades coloniales</a></li>
+                                                                            <li><a href="/?p=recursos_naturales" target="_self">Recursos naturales</a></li>
+                                                                            <li><a href="/?p=cultura_tradiciones" target="_self">Cultura y tradiciones</a></li>
+                                                                            <li><a href="/?p=arqueologia" target="_self">Arqueología</a></li>
+                                                                            <li><a href="/?p=haciendas" target="_self">Haciendas</a></li>
+                                    </ul>
+                                    
+                                </li>
+                                                                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sm_footer" class="shadow">
+            <a id="footer_toggle">
+                <span class="ico ico20 icon-menu"></span>
+            </a>
+            <div><b>Gobierno del Estado de Yucatán</b><span class="wrap"><b>2018-2024</b></div>
+            <div>Calle 61 x 60 y 62, Col. Centro<br>C.P. 97000, Mérida, Yucatán, México<br>Tel. (999) 930 3100</div>
+        </div>
+    </div>
+</div>
+<script src="/lib/jquery.min.js"></script>
+<script src="/lib/fancybox3/jquery.fancybox.js"></script>
+<script src="/js/slider.js"></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/funciones.js?v=190715"></script>
+<script src="/js/ready.js?v=180424"></script>
+<script src="js/carousel.js"></script>
+<link href="lib/leaflet/leaflet.css" rel="stylesheet">
+<script src="lib/leaflet/leaflet.js"></script>
+<script src="js/mapa.js?v=190321"></script>
+<script>
+$(function() {
+    $('#noticias-detalle').myCarousel();
+    inicializar('map_canvas', '20.685865402221680', '-89.652336120605469');
+    var html = '';
+    html += '<div><b>Temozón Sur</b></div>';
+    html += '<div><img src="/docs/img/tn_temozon_sur.jpg" width="100" height="75" alt="Temozón Sur"></div>';
+    cargar_coordenada(html, '20.685865402221680', '-89.652336120605469');
+});
+</script>
+<script>
+$(function() {
+    $(document).on('click','.btnPrint', function(e) {
+        e.preventDefault();
+        var contents = $('div#cuerpo').html();
+        var estilos = '';
+        $('style').each(function() {
+            estilos += $(this).html();
+        });
+        var frame = $('<iframe />');
+        frame[0].name = 'frame';
+        frame.css({ 'position':'absolute', 'top':'-1000000px' });
+        $('body').append(frame);
+        var doc = frame[0].contentWindow ? frame[0].contentWindow : frame[0].contentDocument.document ? frame[0].contentDocument.document : frame[0].contentDocument;
+        doc = doc.document;
+        doc.open();
+        doc.write('<!doctype html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">');
+        doc.write('<link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">');
+        doc.write('<link href="/css/style.css?v=190919" rel="stylesheet">');
+        doc.write('<link href="/css/yucatan.css?v=190812" rel="stylesheet">');
+        doc.write('<link href="/lib/leaflet/leaflet.css" rel="stylesheet">');
+        if (estilos!='') {
+            doc.write('<style>'+estilos+'</style>');
+        }
+        doc.write('</head><body>');
+        doc.write('<div class="print">');
+        doc.write('<img src="/img/logo_2018_2024.png" class="logo" alt="Gobierno del Estado de Yucatán">');
+        doc.write('</div>');
+                doc.write('<div class="titulo_pagina">Temozón Sur</div>');
+                doc.write('<div id="cuerpo">'+contents+'</div>');
+        doc.write('<div class="height-20"></div>');
+        doc.write('<div class="print_url">http://www.yucatan.gob.mx/?p=temozon_sur</div>');
+        doc.write('</body></html>');
+        doc.close();
+        setTimeout(function() {
+            window.frames["frame"].focus();
+            window.frames["frame"].print();
+            frame.remove();
+        }, 500);
+    });
+});
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-17772491-1', 'auto');
+ga('send', 'pageview');
+</script>
+</body>
+</html>

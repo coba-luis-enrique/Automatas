@@ -53,7 +53,7 @@ body {
     }
     
     div {
-background-image: url("img_b.jpg");
+background-image: url("code.jpg");
       
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -67,8 +67,6 @@ font-size:20px;
       .catsandstars {
         background-image:  url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJCCwGGpJk0HZm1ocTmE2gFYvRaA3gtGBhOTM6yJYCsIgOSRXi"), 
                            url("https://mdn.mozillademos.org/files/7693/catfront.png");
-        
-        background-color: transparent;
       }
      
   

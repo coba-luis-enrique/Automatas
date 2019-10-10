@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecto</title>
+    <link rel="stylesheet" href="estilo.css">
 
     <script src="funciones.js"></script>
+    
 </head>
 <body>
 
@@ -26,14 +28,25 @@
         }
     }
     ?>
-        <h1 class="text-center">proyecto</h1>
-        <button type="button" onclick="Fuente()">Codigo Html</button>
-        <button type="button" onclick="imagen()">Imagenes</button>
-        <button type="button" onclick="Title()">Title</button>
-        <button type="button" onclick="con()">Comentarios</button>
-        <button type="button" onclick="sin_con()">Eliminar Comentarios</button>
-        <button type="button" onclick="parrafo()">Etiqueta Parrafo</button>
-        <button type="button" onclick="enc()">Encriptar</button>
+
+    <div class="container">
+    <h1 style="font-size:30px;
+    text-align: center;
+    color:yellow;">Project two operations:</h1>
+    <h2 style="font-size:25px;
+    text-align: center;
+    color:yellow;">welcome to my project, simple but functional</h2>
+    <details>   
+	<summary>Mi contenido </summary>
+     <p class="catsandstars">
+
+        <button type="button" onclick="Fuente()"class="boton">Codigo Html</button>
+        <button type="button" onclick="imagen()"class="boton">Imagenes</button>
+        <button type="button" onclick="Title()"class="boton">Title</button>
+        <button type="button" onclick="con()"class="boton">Comentarios</button>
+        <button type="button" onclick="sin_con()"class="boton">Eliminar Comentarios</button>
+        <button type="button" onclick="parrafo()"class="boton">Etiqueta Parrafo</button>
+        <button type="button" onclick="enc()"class="boton">Encriptar</button>
     </div>
     <div id="operacion">
 

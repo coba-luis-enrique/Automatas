@@ -12,13 +12,13 @@ function Fuente(){
 }
 //Mostrar codigo Imagen
 function imagen(){
-  var img = /<img(.*?)>/ig;
+  var img = /([A-Z0-9_+-/*]+[\S]+["jpg"]+["png"]+["gift"])/g;
   var imag_m = text.match(img);
   document.getElementById("operacion").innerText = imag_m.toString() ;
 }
 //Mostrar codigo Title
 function Title(){
-  var tit = /<title>(.*?)<\/title>/ig;
+  var tit = /(?=[^<\s/title>])+(.*?)(?=<\/title>)/g;
   var tit_m = text.match(tit);
   document.getElementById("operacion").innerText = tit_m.toString() ;
 }

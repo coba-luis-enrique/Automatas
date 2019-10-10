@@ -45,8 +45,8 @@
         <button type="button" onclick="Title()"class="boton">Title</button>
         <button type="button" onclick="con()"class="boton">Comentarios</button>
         <button type="button" onclick="sin_con()"class="boton">Eliminar Comentarios</button>
-        <button type="button" onclick="parrafo()"class="boton">Etiqueta Parrafo</button>
-        <button type="button" onclick="enc()"class="boton">Encriptar</button>
+        <button type="button" onclick="parrafo()"class="boton"> Encriptar Etiqueta Parrafo</button>
+
     </div>
     <div id="operacion">
 
